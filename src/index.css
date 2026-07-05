@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  body {
+    @apply bg-[#F4F5FA] text-slate-900 text-sm antialiased;
+  }
+  ::selection {
+    @apply bg-indigo-100;
+  }
+}
