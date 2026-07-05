@@ -89,23 +89,27 @@ export default function TopBar() {
       </header>
 
       {/* mobile bottom tab bar */}
-      <nav className="fixed inset-x-0 bottom-0 z-30 flex border-t border-slate-200/70 bg-white/95 backdrop-blur sm:hidden">
+      <nav className="fixed inset-x-0 bottom-0 z-30 flex gap-2 border-t border-slate-200 bg-white px-3 py-2 shadow-[0_-4px_16px_-8px_rgba(16,24,40,0.15)] sm:hidden">
         <Link
           to="/faculty"
-          className={`flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-medium ${
-            pathname === '/faculty' ? 'text-indigo-600' : 'text-slate-400'
+          className={`flex flex-1 flex-col items-center gap-0.5 rounded-xl py-1.5 text-[11px] font-semibold transition ${
+            pathname === '/faculty'
+              ? 'bg-indigo-600 text-white shadow-sm'
+              : 'text-slate-500 hover:bg-slate-100'
           }`}
         >
-          <User size={18} strokeWidth={2} />
+          <User size={18} strokeWidth={2.25} />
           Faculty
         </Link>
         <Link
           to="/hod"
-          className={`flex flex-1 flex-col items-center gap-0.5 py-2 text-[11px] font-medium ${
-            pathname === '/hod' ? 'text-indigo-600' : 'text-slate-400'
+          className={`flex flex-1 flex-col items-center gap-0.5 rounded-xl py-1.5 text-[11px] font-semibold transition ${
+            pathname === '/hod'
+              ? 'bg-indigo-600 text-white shadow-sm'
+              : 'text-slate-500 hover:bg-slate-100'
           }`}
         >
-          <Users size={18} strokeWidth={2} />
+          <Users size={18} strokeWidth={2.25} />
           HoD
         </Link>
       </nav>

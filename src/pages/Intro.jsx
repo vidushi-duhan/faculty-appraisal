@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, User, Users } from 'lucide-react'
+import { ArrowRight, MonitorSmartphone, User, Users } from 'lucide-react'
 import Legend from '../components/Legend'
 
 const trySteps = [
@@ -21,10 +21,16 @@ export default function Intro() {
 
       <main className="relative mx-auto max-w-3xl px-4 pb-16 pt-14 sm:pt-20">
         <div className="text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[12px] font-medium text-slate-500 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Working prototype · sample data
-          </span>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[12px] font-medium text-slate-500 backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              Working prototype · sample data
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-100 bg-indigo-50 px-3 py-1 text-[12px] font-medium text-indigo-600">
+              <MonitorSmartphone size={13} strokeWidth={2} />
+              Works on desktop and mobile
+            </span>
+          </div>
           <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Faculty Appraisal
             <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">

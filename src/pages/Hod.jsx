@@ -400,11 +400,11 @@ function FacultyDetail({ fac, facIndex, scrollTarget }) {
 
       {/* review by exception (F2): verified strip + open claims in one card */}
       <section id="det-claims" className="rounded-2xl border border-slate-100 bg-white p-5 shadow-card">
-        <header className="flex items-center gap-3">
+        <header className="flex items-start gap-3">
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-indigo-50 text-indigo-600">
             <ClipboardList size={17} />
           </span>
-          <div>
+          <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5">
               <h3 className="text-[15px] font-bold text-slate-900">Claims to review</h3>
               <Tag code="F2" kind="hod" />
@@ -414,8 +414,11 @@ function FacultyDetail({ fac, facIndex, scrollTarget }) {
             </p>
           </div>
           {claims.length > 0 && (
-            <span className="ml-auto rounded-full bg-indigo-600 px-2 py-0.5 text-[11px] font-bold text-white">
-              {claims.filter((c) => c.status === 'open').length} open
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-indigo-600 px-2.5 py-1 text-[11px] font-bold leading-none text-white">
+              <span className="tabular-nums">
+                {claims.filter((c) => c.status === 'open').length}
+              </span>
+              open
             </span>
           )}
         </header>

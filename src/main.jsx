@@ -7,6 +7,7 @@ import '@fontsource/inter/600.css'
 import '@fontsource/inter/700.css'
 import '@fontsource/inter/800.css'
 import './index.css'
+import ScrollToTop from './components/ScrollToTop'
 import Intro from './pages/Intro'
 import Faculty from './pages/Faculty'
 import Hod from './pages/Hod'
@@ -14,6 +15,7 @@ import Hod from './pages/Hod'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/faculty" element={<Faculty />} />
